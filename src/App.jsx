@@ -33,6 +33,7 @@ const App = () => {
     localStorage.setItem("mostrarCompletadas", mostrarCompletadas.toString());
   }, [mostrarCompletadas]);
   // se renderiza el contenedor con el componente header, pasandole valores de mostrar completadas y cambiarMostrarCompletadas, asimismo el componente FormularioTareas
+
   return (
     <div className="contenedor">
       <Header
