@@ -2,6 +2,7 @@ import React from "react";
 import Tarea from "./tareas";
 
 const ListaTareas = ({ tareas, cambiarTareas, mostrarCompletadas }) => {
+  // se crea la funcion para cambiar el estado individual de cada tarea a completada/no completada
   const toggleCompletada = (id) => {
     cambiarTareas(
       tareas.map((tarea) => {
@@ -12,6 +13,7 @@ const ListaTareas = ({ tareas, cambiarTareas, mostrarCompletadas }) => {
       })
     );
   };
+  // se crea la funcion para borrar la tarea
   const borrarTarea = (id) => {
     cambiarTareas(
       tareas.filter((tarea) => {
@@ -22,6 +24,7 @@ const ListaTareas = ({ tareas, cambiarTareas, mostrarCompletadas }) => {
       })
     );
   };
+  // se crea la funcion para editar la tarea
   const editarTarea = (id, nuevoTexto) => {
     cambiarTareas(
       tareas.map((tarea) => {

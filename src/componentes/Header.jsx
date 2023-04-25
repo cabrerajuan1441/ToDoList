@@ -2,7 +2,10 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEyeSlash, faEye } from "@fortawesome/free-solid-svg-icons";
 
+// se crea la constante header pasandole por valores mostrarCompletadas y cambiarMostrarCompletadas
+
 const Header = ({ mostrarCompletadas, cambiarMostrarCompletadas }) => {
+//  se crea la funcion que permite cambiar el estado de mostrarCompletadas
   const toggleCompletadas = () => {
     cambiarMostrarCompletadas(!mostrarCompletadas);
   };

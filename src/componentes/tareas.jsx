@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Tarea = ({ tarea, toggleCompletada, editarTarea, borrarTarea }) => {
+  // se crean dos estados, para editar la tarea y cambiarle el valor(input)
   const [editandoTarea, cambiarEditandoTarea] = useState(false);
   const [nuevaTarea, cambiarNuevaTarea] = useState(tarea.texto);
 
@@ -16,6 +17,7 @@ const Tarea = ({ tarea, toggleCompletada, editarTarea, borrarTarea }) => {
     cambiarEditandoTarea(false);
   };
 
+  // se renderizan los componentes con sus funciones e iconos
   return (
     <li className="lista-tareas__tarea">
       <FontAwesomeIcon

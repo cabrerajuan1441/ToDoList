@@ -5,6 +5,7 @@ import FormularioTareas from "./componentes/formularioTareas";
 import ListaTareas from "./componentes/listaTareas";
 
 const App = () => {
+  // se obtienen las tareas seteadas en localStorage
   const tareasGuardadas = localStorage.getItem("tareas")
     ? JSON.parse(localStorage.getItem("tareas"))
     : [];
@@ -13,6 +14,7 @@ const App = () => {
   useEffect(() => {
     localStorage.setItem("tareas", JSON.stringify(tareas));
   }, [tareas]);
+  // se crea una variable con un valor condicional donde se guarda el estado de "mostrar completadas"
 
   let configMostrarCompletadas = "";
 
@@ -26,11 +28,11 @@ const App = () => {
   const [mostrarCompletadas, cambiarMostrarCompletadas] = useState(
     configMostrarCompletadas
   );
-
+  //  convierte mostrarCompletadas a un valor de string
   useEffect(() => {
     localStorage.setItem("mostrarCompletadas", mostrarCompletadas.toString());
   }, [mostrarCompletadas]);
-
+  // se renderiza el contenedor con el componente header, pasandole valores de mostrar completadas y cambiarMostrarCompletadas, asimismo el componente FormularioTareas
   return (
     <div className="contenedor">
       <Header
